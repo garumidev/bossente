@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Events - Boss Entertainment - Premium Event Planning Solutions in Zambia</title>
+    <meta name="description" content="Explore Boss Entertainment's portfolio of large-scale events, including corporate conferences, festivals, and grand weddings across Zambia. Professional execution and unforgettable experiences.">
+    <meta name="keywords" content="big events Zambia, large scale event planning, corporate conferences Zambia, festival planning, grand weddings Lusaka, Boss Entertainment portfolio">
+    <meta name="author" content="Boss Entertainment">
+    
+    <meta property="og:title" content="Big Events - Boss Entertainment: Large Scale Event Planning">
+    <meta property="og:description" content="Showcasing our expertise in managing grand corporate events, festivals, and weddings in Zambia.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bossentertainment.com/big-events.html">
+    <meta property="og:image" content="images/big-events-hero.jpg">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Big Events - Boss Entertainment: Large Scale Event Planning">
+    <meta name="twitter:description" content="Explore our portfolio of grand events.">
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="images/big-events-hero.jpg" as="image">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#000000',
+                        secondary: '#FFFFFF',
+                        tertiary: '#808080',
+                        accent: '#808080',
+                        dark: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 100%);
+        }
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        .gradient-overlay {
+            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 60%);
+        }
+        .cta-gradient {
+            background: linear-gradient(135deg, #000000 0%, #808080 100%);
+        }
+        .testimonial-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+        }
+        .counter-box {
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        .hover-zoom {
+            transition: transform 0.3s ease-in-out;
+        }
+        .hover-zoom:hover {
+            transform: scale(1.05);
+        }
+        .property-tag {
+            background: rgba(128, 128, 128, 0.9);
+            box-shadow: 0 2px 10px rgba(128, 128, 128, 0.4);
+        }
+        
+        /* Navigation Styles */
+        .navbar {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            transition: all 0.3s ease;
+        }
+        .navbar.scrolled {
+            background: rgba(0, 0, 0, 0.95);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #ffffff;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+        
+        /* Mobile Menu Styles */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+        
+        /* Hamburger Animation */
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: white;
+            margin: 5px 0;
+            transition: 0.3s;
+            transform-origin: center;
+        }
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+        
+        @media (max-width: 1023px) {
+            body {
+                padding-bottom: 60px;
+            }
+            .scroll-to-top {
+                bottom: 80px;
+            }
+        }
+        @media (min-width: 1024px) {
+            .sticky-footer {
+                display: none;
+            }
+        }
+        
+        /* Loading Animation */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid #333;
+            border-top: 4px solid #fff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Image optimization */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* Performance optimizations */
+        .will-change-transform {
+            will-change: transform;
+        }
+        
+        /* Accessibility improvements */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        
+        /* Focus states for accessibility */
+        .focus-visible:focus {
+            outline: 2px solid #ffffff;
+            outline-offset: 2px;
+        }
+
+        .category-button.active {
+            background-color: #000000;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800 overflow-x-hidden bg-white">
+
+<div id="loading-overlay" class="loading-overlay">
+    <div class="loading-spinner"></div>
+</div>
+
+<nav class="navbar fixed top-0 left-0 right-0 z-50 px-6 py-4">
+    <div class="container mx-auto flex items-center justify-between">
+        <a href="index.html#home" class="text-2xl font-bold text-white flex items-center">
+            <span class="text-white">Boss</span>
+            <span class="text-secondary ml-1">Entertainment</span>
+        </a>
+        
+        <div class="hidden lg:flex items-center space-x-8">
+            <a href="index.html#home" class="nav-link text-white hover:text-gray-300 font-medium">Home</a>
+            <a href="index.html#about-us" class="nav-link text-white hover:text-gray-300 font-medium">About</a>
+            <a href="index.html#services" class="nav-link text-white hover:text-gray-300 font-medium">Services</a>
+            <a href="index.html#events" class="nav-link text-white hover:text-gray-300 font-medium active">Events</a>
+            <a href="index.html#contact-us" class="nav-link text-white hover:text-gray-300 font-medium">Contact</a>
+            <a href="tel:+260761741656" class="bg-white text-black px-4 py-2 rounded-md hover:bg-gray-200 transition font-medium">
+                <i class="fas fa-phone mr-2"></i>Call Now
+            </a>
+        </div>
+        
+        <button id="mobile-menu-btn" class="lg:hidden hamburger focus:outline-none" aria-label="Toggle mobile menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+    
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-80 h-full bg-black/95 backdrop-blur-md lg:hidden z-40">
+        <div class="flex flex-col h-full pt-20 px-6">
+            <a href="index.html#home" class="mobile-nav-link text-white py-4 border-b border-gray-700 hover:text-gray-300 transition">Home</a>
+            <a href="index.html#about-us" class="mobile-nav-link text-white py-4 border-b border-gray-700 hover:text-gray-300 transition">About</a>
+            <a href="index.html#services" class="mobile-nav-link text-white py-4 border-b border-gray-700 hover:text-gray-300 transition">Services</a>
+            <a href="index.html#events" class="mobile-nav-link text-white py-4 border-b border-gray-700 hover:text-gray-300 transition">Events</a>
+            <a href="index.html#contact-us" class="mobile-nav-link text-white py-4 border-b border-gray-700 hover:text-gray-300 transition">Contact</a>
+            <div class="mt-8 space-y-4">
+                <a href="tel:+260971793185" class="block bg-white text-black px-6 py-3 rounded-md text-center hover:bg-gray-200 transition font-medium">
+                    <i class="fas fa-phone mr-2"></i>Call Now
+                </a>
+                <a href="https://wa.me/260761741656" class="block bg-green-600 text-white px-6 py-3 rounded-md text-center hover:bg-green-700 transition font-medium">
+                    <i class="fab fa-whatsapp mr-2"></i>WhatsApp
+                </a>
+            </div>
+            <div class="mt-auto pb-8">
+                <div class="flex space-x-4 justify-center">
+                    <a href="#" class="text-gray-300 hover:text-white transition" aria-label="Facebook">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-white transition" aria-label="Instagram">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-white transition" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<section id="big-events-hero" class="relative min-h-screen flex items-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70 z-10"></div>
+        <img src="images/event 1.jpg" alt="Large-scale event setup with lighting and stage" class="w-full h-full object-cover" loading="eager">
+    </div>
+    <div class="container mx-auto px-6 relative z-20 pt-20">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="text-white animate__animated animate__fadeInLeft">
+                <h1 class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6 font-serif">
+                    Grand Events,<br><span class="text-secondary">Unforgettable Experiences</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-100 mb-8 max-w-xl leading-relaxed">
+                    From elaborate weddings to major corporate functions and vibrant festivals, Boss Entertainment delivers impeccable large-scale event management.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#our-projects" class="bg-secondary hover:bg-gray-300 text-black font-medium px-6 md:px-8 py-3 rounded-md transition shadow-lg hover:shadow-xl flex items-center justify-center focus-visible">
+                        <i class="fas fa-th-large mr-2"></i>
+                        Explore Our Projects
+                    </a>
+                    <a href="index.html#contact-us" class="bg-black border-2 border-white hover:bg-gray-800 text-white font-medium px-6 md:px-8 py-3 rounded-md transition shadow-lg hover:shadow-xl flex items-center justify-center focus-visible">
+                        <i class="fas fa-phone-alt mr-2"></i>
+                        Inquire Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="our-projects" class="py-16 md:py-20 px-6 bg-gray-100">
+    <div class="container mx-auto">
+        <div class="text-center mb-12 md:mb-16">
+            <span class="text-primary uppercase font-bold tracking-wider text-sm">Our Grand Portfolio</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-black mt-2 mb-4 font-serif">Showcasing Our Expertise</h2>
+            <div class="w-20 h-1 bg-primary mx-auto"></div>
+            <p class="text-gray-600 max-w-2xl mx-auto mt-6 leading-relaxed">
+                Discover the breadth of our capabilities through a selection of our most prominent large-scale events.
+            </p>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-4 mb-12">
+            <button class="category-button px-6 py-2 rounded-full border border-gray-300 bg-white text-gray-800 hover:bg-gray-100 transition active" data-category="all">All Projects</button>
+            <button class="category-button px-6 py-2 rounded-full border border-gray-300 bg-white text-gray-800 hover:bg-gray-100 transition" data-category="corporate">Corporate Events</button>
+            <button class="category-button px-6 py-2 rounded-full border border-gray-300 bg-white text-gray-800 hover:bg-gray-100 transition" data-category="weddings">Weddings</button>
+            <button class="category-button px-6 py-2 rounded-full border border-gray-300 bg-white text-gray-800 hover:bg-gray-100 transition" data-category="festivals">Festivals & Concerts</button>
+            <button class="category-button px-6 py-2 rounded-full border border-gray-300 bg-white text-gray-800 hover:bg-gray-100 transition" data-category="exhibitions">Exhibitions</button>
+        </div>
+
+        <div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="project-item bg-white rounded-xl shadow-lg overflow-hidden hover-zoom will-change-transform animate__animated animate__fadeInUp" data-category="corporate">
+                <div class="h-64 relative">
+                    <img src="images/event 3.jpg" alt="Large-scale corporate conference setup" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 gradient-overlay"></div>
+                    <div class="absolute bottom-4 left-4 text-white p-2 property-tag rounded-md text-sm font-medium">Corporate</div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2 text-black">Annual Business Summit 2024</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Seamlessly executed a multi-day business summit for over 500 delegates, featuring multiple breakout sessions, gala dinner, and integrated tech solutions.
+                    </p>
+                    <div class="flex items-center text-gray-500 text-sm">
+                        <i class="fas fa-map-marker-alt mr-2"></i> Lusaka, Zambia
+                        <span class="mx-3">|</span>
+                        <i class="fas fa-users mr-2"></i> 500+ Attendees
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item bg-white rounded-xl shadow-lg overflow-hidden hover-zoom will-change-transform animate__animated animate__fadeInUp" data-category="weddings">
+                <div class="h-64 relative">
+                    <img src="images/stage1.jpg" alt="Ngoma Awards stage class="w-full h-full object-cover">
+                    <div class="absolute inset-0 gradient-overlay"></div>
+                    <div class="absolute bottom-4 left-4 text-white p-2 property-tag rounded-md text-sm font-medium">Ngoma Awards</div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2 text-black">The Royal Nuptials</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Orchestrated a breathtaking event with intricate designs, bespoke lighting, and a lavish reception for 800 guests.
+                    </p>
+                    <div class="flex items-center text-gray-500 text-sm">
+                        <i class="fas fa-map-marker-alt mr-2"></i> Livingstone, Zambia
+                        <span class="mx-3">|</span>
+                        <i class="fas fa-users mr-2"></i> 800 Guests
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item bg-white rounded-xl shadow-lg overflow-hidden hover-zoom will-change-transform animate__animated animate__fadeInUp" data-category="festivals">
+                <div class="h-64 relative">
+                    <img src="images/music-festival.jpg" alt="Vibrant outdoor music festival with large stage" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 gradient-overlay"></div>
+                    <div class="absolute bottom-4 left-4 text-white p-2 property-tag rounded-md text-sm font-medium">Festival</div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2 text-black">Zambian Rhythms Fest</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Managed all aspects of a multi-day music festival, including stage production, artist liaison, security, and vendor management for 10,000+ attendees.
+                    </p>
+                    <div class="flex items-center text-gray-500 text-sm">
+                        <i class="fas fa-map-marker-alt mr-2"></i> Kitwe, Zambia
+                        <span class="mx-3">|</span>
+                        <i class="fas fa-users mr-2"></i> 10,000+ Attendees
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item bg-white rounded-xl shadow-lg overflow-hidden hover-zoom will-change-transform animate__animated animate__fadeInUp" data-category="corporate">
+                <div class="h-64 relative">
+                    <img src="images/product-launch.jpg" alt="High-tech product launch event" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 gradient-overlay"></div>
+                    <div class="absolute bottom-4 left-4 text-white p-2 property-tag rounded-md text-sm font-medium">Corporate</div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2 text-black">Innovate Zambia Tech Launch</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Coordinated an immersive product launch event, integrating cutting-edge AV, interactive displays, and a dynamic presentation for media and investors.
+                    </p>
+                    <div class="flex items-center text-gray-500 text-sm">
+                        <i class="fas fa-map-marker-alt mr-2"></i> Lusaka, Zambia
+                        <span class="mx-3">|</span>
+                        <i class="fas fa-users mr-2"></i> 200 Guests
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item bg-white rounded-xl shadow-lg overflow-hidden hover-zoom will-change-transform animate__animated animate__fadeInUp" data-category="exhibitions">
+                <div class="h-64 relative">
+                    <img src="images/cultural-exhibition.jpg" alt="Art and cultural exhibition" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 gradient-overlay"></div>
+                    <div class="absolute bottom-4 left-4 text-white p-2 property-tag rounded-md text-sm font-medium">Exhibition</div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2 text-black">Zambian Heritage Expo</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Curated and managed a multi-day cultural exhibition, showcasing traditional arts, crafts, and performances, attracting local and international visitors.
+                    </p>
+                    <div class="flex items-center text-gray-500 text-sm">
+                        <i class="fas fa-map-marker-alt mr-2"></i> Ndola, Zambia
+                        <span class="mx-3">|</span>
+                        <i class="fas fa-users mr-2"></i> 3,000+ Visitors
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item bg-white rounded-xl shadow-lg overflow-hidden hover-zoom will-change-transform animate__animated animate__fadeInUp" data-category="corporate">
+                <div class="h-64 relative">
+                    <img src="images/anniversary-gala.jpg" alt="Elegant corporate anniversary gala" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 gradient-overlay"></div>
+                    <div class="absolute bottom-4 left-4 text-white p-2 property-tag rounded-md text-sm font-medium">Corporate</div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2 text-black">Company X 20th Anniversary</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Planned and executed an elegant anniversary gala dinner, complete with themed decor, live entertainment, and a distinguished guest list.
+                    </p>
+                    <div class="flex items-center text-gray-500 text-sm">
+                        <i class="fas fa-map-marker-alt mr-2"></i> Lusaka, Zambia
+                        <span class="mx-3">|</span>
+                        <i class="fas fa-users mr-2"></i> 300 Guests
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-item bg-white rounded-xl shadow-lg overflow-hidden hover-zoom will-change-transform animate__animated animate__fadeInUp" data-category="weddings">
+                <div class="h-64 relative">
+                    <img src="images/outdoor-wedding.jpg" alt="Beautiful outdoor wedding reception" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 gradient-overlay"></div>
+                    <div class="absolute bottom-4 left-4 text-white p-2 property-tag rounded-md text-sm font-medium">Wedding</div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2 text-black">Garden of Love Wedding</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Designed and managed a stunning outdoor wedding, transforming a garden into a magical setting with intricate floral arrangements and ambient lighting.
+                    </p>
+                    <div class="flex items-center text-gray-500 text-sm">
+                        <i class="fas fa-map-marker-alt mr-2"></i> Siavonga, Zambia
+                        <span class="mx-3">|</span>
+                        <i class="fas fa-users mr-2"></i> 400 Guests
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item bg-white rounded-xl shadow-lg overflow-hidden hover-zoom will-change-transform animate__animated animate__fadeInUp" data-category="corporate">
+                <div class="h-64 relative">
+                    <img src="images/charity-gala.jpg" alt="Charity fundraising gala dinner" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 gradient-overlay"></div>
+                    <div class="absolute bottom-4 left-4 text-white p-2 property-tag rounded-md text-sm font-medium">Corporate</div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2 text-black">Hope for Tomorrow Gala</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Facilitated a successful charity fundraising gala, managing sponsorships, entertainment, and logistics to raise significant funds for a noble cause.
+                    </p>
+                    <div class="flex items-center text-gray-500 text-sm">
+                        <i class="fas fa-map-marker-alt mr-2"></i> Lusaka, Zambia
+                        <span class="mx-3">|</span>
+                        <i class="fas fa-users mr-2"></i> 250 Guests
+                    </div>
+                </div>
+            </div>
+
+             <div class="project-item bg-white rounded-xl shadow-lg overflow-hidden hover-zoom will-change-transform animate__animated animate__fadeInUp" data-category="exhibitions">
+                <div class="h-64 relative">
+                    <img src="images/fashion-show.jpg" alt="Dynamic fashion show runway" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 gradient-overlay"></div>
+                    <div class="absolute bottom-4 left-4 text-white p-2 property-tag rounded-md text-sm font-medium">Exhibition</div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2 text-black">Lusaka Fashion Week</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Executed a high-profile fashion week event, including runway setup, backstage management, lighting, and sound for multiple designer showcases.
+                    </p>
+                    <div class="flex items-center text-gray-500 text-sm">
+                        <i class="fas fa-map-marker-alt mr-2"></i> Lusaka, Zambia
+                        <span class="mx-3">|</span>
+                        <i class="fas fa-users mr-2"></i> 700+ Attendees
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="text-center mt-12">
+            <a href="index.html#contact-us" class="inline-block bg-black hover:bg-gray-800 text-white font-medium px-8 py-4 rounded-md transition shadow-lg hover:shadow-xl focus-visible">
+                <i class="fas fa-handshake mr-2"></i> Discuss Your Large Event
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="py-16 md:py-20 px-6 bg-white">
+    <div class="container mx-auto">
+        <div class="text-center mb-12 md:mb-16">
+            <span class="text-primary uppercase font-bold tracking-wider text-sm">What Our Clients Say</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-black mt-2 mb-4 font-serif">Hear From Those We've Celebrated With</h2>
+            <div class="w-20 h-1 bg-primary mx-auto"></div>
+            <p class="text-gray-600 max-w-2xl mx-auto mt-6 leading-relaxed">
+                Our success is reflected in the satisfaction of our clients and the unforgettable memories we help create.
+            </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="testimonial-card p-6 md:p-8 rounded-xl shadow-lg border border-gray-100 will-change-transform animate__animated animate__fadeInUp">
+                <div class="flex items-center mb-4">
+                    <img src="images/client-1.jpg" alt="Client 1" class="w-16 h-16 rounded-full object-cover mr-4 border-2 border-primary">
+                    <div>
+                        <p class="font-bold text-lg text-black">Jane & John Doe</p>
+                        <p class="text-gray-600 text-sm">Wedding Clients</p>
+                    </div>
+                </div>
+                <p class="text-gray-700 leading-relaxed italic mb-4">
+                    "Boss Entertainment turned our wedding into a fairy tale. Every detail was perfect, from the breathtaking decor to the seamless coordination. They truly are the best in Zambia!"
+                </p>
+                <div class="flex text-yellow-500">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+            <div class="testimonial-card p-6 md:p-8 rounded-xl shadow-lg border border-gray-100 will-change-transform animate__animated animate__fadeInUp animate__delay-0.2s">
+                <div class="flex items-center mb-4">
+                    <img src="images/client-2.jpg" alt="Client 2" class="w-16 h-16 rounded-full object-cover mr-4 border-2 border-primary">
+                    <div>
+                        <p class="font-bold text-lg text-black">Mr. Alex Banda</p>
+                        <p class="text-gray-600 text-sm">CEO, Innovate Zambia</p>
+                    </div>
+                </div>
+                <p class="text-gray-700 leading-relaxed italic mb-4">
+                    "For our annual summit, Boss Entertainment exceeded all expectations. Their professionalism and attention to detail ensured a flawless event. Highly recommend for corporate functions!"
+                </p>
+                <div class="flex text-yellow-500">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+            <div class="testimonial-card p-6 md:p-8 rounded-xl shadow-lg border border-gray-100 will-change-transform animate__animated animate__fadeInUp animate__delay-0.4s">
+                <div class="flex items-center mb-4">
+                    <img src="images/client-3.jpg" alt="Client 3" class="w-16 h-16 rounded-full object-cover mr-4 border-2 border-primary">
+                    <div>
+                        <p class="font-bold text-lg text-black">Ms. Sarah Mweemba</p>
+                        <p class="text-gray-600 text-sm">Festival Organizer</p>
+                    </div>
+                </div>
+                <p class="text-gray-700 leading-relaxed italic mb-4">
+                    "Organizing a festival is daunting, but Boss Entertainment made it effortless. Their expertise in logistics and crowd management was invaluable. We couldn't have done it without them!"
+                </p>
+                <div class="flex text-yellow-500">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-gradient py-12 md:py-16 px-6 relative overflow-hidden">
+    <div class="container mx-auto text-center text-white relative z-10">
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 text-shadow font-serif">Ready to Plan Your Next Grand Event?</h2>
+        <p class="text-lg mb-8 max-w-2xl mx-auto leading-relaxed">
+            Let our experts help you bring your vision to life and create moments that last a lifetime.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="tel:+260761741656" class="bg-secondary hover:bg-gray-300 text-black font-bold px-6 md:px-8 py-3 md:py-4 rounded-md inline-block transition shadow-lg hover:shadow-xl focus-visible">
+                <i class="fas fa-phone mr-2"></i> Call Now
+            </a>
+            <a href="https://wa.me/260761741656" class="bg-green-600 hover:bg-green-700 text-white font-bold px-6 md:px-8 py-3 md:py-4 rounded-md inline-block transition shadow-lg hover:shadow-xl focus-visible">
+                <i class="fab fa-whatsapp mr-2"></i> WhatsApp Us
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-black text-white py-12 px-6">
+    <div class="container mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="lg:col-span-2">
+                <div class="text-2xl font-bold mb-4">
+                    <span class="text-white">Boss</span>
+                    <span class="text-secondary">Entertainment</span>
+                </div>
+                <p class="text-gray-300 mb-6 max-w-md leading-relaxed">
+                    Your trusted partner for premium event planning solutions across Zambia. We turn your special moments into unforgettable memories.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-300 hover:text-secondary transition text-xl" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-secondary transition text-xl" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-secondary transition text-xl" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/260761741656" class="text-gray-300 hover:text-secondary transition text-xl" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="index.html#home" class="text-gray-300 hover:text-white transition">Home</a></li>
+                    <li><a href="index.html#about-us" class="text-gray-300 hover:text-white transition">About Us</a></li>
+                    <li><a href="index.html#services" class="text-gray-300 hover:text-white transition">Services</a></li>
+                    <li><a href="index.html#events" class="text-gray-300 hover:text-white transition">Events</a></li>
+                    <li><a href="index.html#contact-us" class="text-gray-300 hover:text-white transition">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold mb-4">Contact Info</h3>
+                <ul class="space-y-2">
+                    <li class="flex items-center text-gray-300">
+                        <i class="fas fa-phone mr-2"></i>
+                        <a href="tel:+260971793185" class="hover:text-white transition">+260 761 741 656</a>
+                    </li>
+                    <li class="flex items-center text-gray-300">
+                        <i class="fas fa-envelope mr-2"></i>
+                        <a href="mailto:info@bossentertainment.com" class="hover:text-white transition">info@bossentertainment.com</a>
+                    </li>
+                    <li class="flex items-start text-gray-300">
+                        <i class="fas fa-map-marker-alt mr-2 mt-1"></i>
+                        <span>Lusaka, Zambia</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+            <p class="text-gray-300 text-sm mb-2">©<span id="current-year-footer">2025</span> Boss Entertainment. All rights reserved.</p>
+            <p class="text-gray-400 text-xs">Powered by Garumi Dev</p>
+        </div>
+    </div>
+</footer>
+
+<a href="https://wa.me/0761741656" class="floating-whatsapp bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:shadow-xl focus-visible" aria-label="Contact us on WhatsApp">
+    <i class="fab fa-whatsapp text-2xl"></i>
+</a>
+
+<button id="back-to-top" class="fixed bottom-20 right-6 bg-black hover:bg-gray-800 text-white p-3 rounded-full shadow-lg transition-all duration-300 opacity-0 pointer-events-none focus-visible" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+</button>
+
+<script>
+    // Page Loading
+    window.addEventListener('load', function() {
+        const loadingOverlay = document.getElementById('loading-overlay');
+        loadingOverlay.style.opacity = '0';
+        setTimeout(() => {
+            loadingOverlay.style.display = 'none';
+        }, 500);
+    });
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburger = document.querySelector('.hamburger');
+
+    mobileMenuBtn.addEventListener('click', function() {
+        mobileMenu.classList.toggle('active');
+        hamburger.classList.toggle('active');
+        document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+    });
+
+    // Close mobile menu when clicking on links
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', function() {
+            mobileMenu.classList.remove('active');
+            hamburger.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+            mobileMenu.classList.remove('active');
+            hamburger.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+
+    // Navbar scroll effect
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 100) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                const offsetTop = target.offsetTop - 80;
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Active navigation link highlighting (adapted for current page)
+    const navLinks = document.querySelectorAll('.nav-link');
+    const path = window.location.pathname;
+    
+    // Check if the current page is big-events.html
+    if (path.includes('big-events.html')) {
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').includes('#events')) {
+                link.classList.add('active');
+            }
+        });
+    }
+
+    // Intersection Observer for animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate__fadeInUp');
+            }
+        });
+    }, observerOptions);
+
+    // Observe sections for animations
+    document.querySelectorAll('section').forEach(section => {
+        observer.observe(section);
+    });
+
+    // Back to Top Button
+    const backToTopBtn = document.getElementById('back-to-top');
+    
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+            backToTopBtn.style.opacity = '1';
+            backToTopBtn.style.pointerEvents = 'auto';
+        } else {
+            backToTopBtn.style.opacity = '0';
+            backToTopBtn.style.pointerEvents = 'none';
+        }
+    });
+
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // Project Category Filtering
+    const categoryButtons = document.querySelectorAll('.category-button');
+    const projectItems = document.querySelectorAll('.project-item');
+
+    categoryButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            categoryButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to the clicked button
+            button.classList.add('active');
+
+            const category = button.dataset.category;
+
+            projectItems.forEach(item => {
+                if (category === 'all' || item.dataset.category === category) {
+                    item.style.display = 'block'; // Or 'grid' or 'flex' depending on layout
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+
+    // Keyboard navigation for accessibility
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            mobileMenu.classList.remove('active');
+            hamburger.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+
+    // Performance optimization: Lazy load images
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src || img.src; // Use data-src for actual lazy loading
+                    img.classList.remove('lazy');
+                    imageObserver.unobserve(img);
+                }
+            });
+        });
+
+        document.querySelectorAll('img[data-src]').forEach(img => {
+            imageObserver.observe(img);
+        });
+    }
+
+    // Update current year in footer
+    document.getElementById('current-year-footer').textContent = new Date().getFullYear();
+    
+    // Preload critical images for this page
+    const preloadImages = [
+        'images/big-events-hero.jpg',
+        'images/corporate-conference.jpg',
+        'images/grand-wedding.jpg',
+        'images/music-festival.jpg',
+        'images/product-launch.jpg',
+        'images/cultural-exhibition.jpg',
+        'images/anniversary-gala.jpg',
+        'images/outdoor-wedding.jpg',
+        'images/charity-gala.jpg',
+        'images/fashion-show.jpg'
+    ];
+    
+    preloadImages.forEach(src => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.href = src;
+        link.as = 'image';
+        document.head.appendChild(link);
+    });
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Big Events - Boss Entertainment",
+  "description": "Explore Boss Entertainment's portfolio of large-scale events, including corporate conferences, festivals, and grand weddings across Zambia.",
+  "url": "https://bossentertainment.com/big-events.html",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Boss Entertainment",
+    "url": "https://bossentertainment.com"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://bossentertainment.com/big-events.html"
+  },
+  "about": [
+    {
+      "@type": "Service",
+      "name": "Corporate Event Planning",
+      "description": "Planning and execution of large-scale corporate conferences, summits, and galas."
+    },
+    {
+      "@type": "Service",
+      "name": "Grand Wedding Planning",
+      "description": "Comprehensive planning for luxurious and large-scale wedding celebrations."
+    },
+    {
+      "@type": "Service",
+      "name": "Festival and Concert Management",
+      "description": "End-to-end management for music festivals and large public concerts."
+    }
+  ]
+}
+</script>
+
+</body>
+</html>

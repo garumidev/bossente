@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Small Events - Boss Entertainment - Intimate Event Planning in Zambia</title>
+    <meta name="description" content="Discover Boss Entertainment's portfolio of intimate events, including birthday parties, baby showers, private dinners, and small corporate gatherings across Zambia. Personalized planning and memorable experiences.">
+    <meta name="keywords" content="small events Zambia, intimate event planning, birthday parties Lusaka, baby showers Zambia, private dinners, small corporate events, Boss Entertainment portfolio">
+    <meta name="author" content="Boss Entertainment">
+    
+    <meta property="og:title" content="Small Events - Boss Entertainment: Intimate Event Planning">
+    <meta property="og:description" content="Showcasing our expertise in managing intimate corporate events, birthdays, and private celebrations in Zambia.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bossentertainment.com/small-events.html">
+    <meta property="og:image" content="images/small-events-hero.jpg">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Small Events - Boss Entertainment: Intimate Event Planning">
+    <meta name="twitter:description" content="Explore our portfolio of intimate events.">
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="images/small-events-hero.jpg" as="image">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#000000',
+                        secondary: '#FFFFFF',
+                        tertiary: '#808080',
+                        accent: '#808080',
+                        dark: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 100%);
+        }
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        .gradient-overlay {
+            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 60%);
+        }
+        .cta-gradient {
+            background: linear-gradient(135deg, #000000 0%, #808080 100%);
+        }
+        .testimonial-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+        }
+        .counter-box {
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        .hover-zoom {
+            transition: transform 0.3s ease-in-out;
+        }
+        .hover-zoom:hover {
+            transform: scale(1.05);
+        }
+        .property-tag {
+            background: rgba(128, 128, 128, 0.9);
+            box-shadow: 0 2px 10px rgba(128, 128, 128, 0.4);
+        }
+        
+        /* Navigation Styles */
+        .navbar {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            transition: all 0.3s ease;
+        }
+        .navbar.scrolled {
+            background: rgba(0, 0, 0, 0.95);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #ffffff;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+        
+        /* Mobile Menu Styles */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+        
+        /* Hamburger Animation */
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: white;
+            margin: 5px 0;
+            transition: 0.3s;
+            transform-origin: center;
+        }
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+        
+        @media (max-width: 1023px) {
+            body {
+                padding-bottom: 60px;
+            }
+            .scroll-to-top {
+                bottom: 80px;
+            }
+        }
+        @media (min-width: 1024px) {
+            .sticky-footer {
+                display: none;
+            }
+        }
+        
+        /* Loading Animation */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid #333;
+            border-top: 4px solid #fff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Image optimization */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* Performance optimizations */
+        .will-change-transform {
+            will-change: transform;
+        }
+        
+        /* Accessibility improvements */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        
+        /* Focus states for accessibility */
+        .focus-visible:focus {
+            outline: 2px solid #ffffff;
+            outline-offset: 2px;
+        }
+
+        .category-button.active {
+            background-color: #000000;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800 overflow-x-hidden bg-white">
+
+<div id="loading-overlay" class="loading-overlay">
+    <div class="loading-spinner"></div>
+</div>
+
+<nav class="navbar fixed top-0 left-0 right-0 z-50 px-6 py-4">
+    <div class="container mx-auto flex items-center justify-between">
+        <a href="index.html#home" class="text-2xl font-bold text-white flex items-center">
+            <span class="text-white">Boss</span>
+            <span class="text-secondary ml-1">Entertainment</span>
+        </a>
+        
+        <div class="hidden lg:flex items-center space-x-8">
+            <a href="index.html#home" class="nav-link text-white hover:text-gray-300 font-medium">Home</a>
+            <a href="index.html#about-us" class="nav-link text-white hover:text-gray-300 font-medium">About</a>
+            <a href="index.html#services" class="nav-link text-white hover:text-gray-300 font-medium">Services</a>
+            <a href="index.html#events" class="nav-link text-white hover:text-gray-300 font-medium active">Events</a>
+            <a href="index.html#contact-us" class="nav-link text-white hover:text-gray-300 font-medium">Contact</a>
+            <a href="tel:+260761741656" class="bg-white text-black px-4 py-2 rounded-md hover:bg-gray-200 transition font-medium">
+                <i class="fas fa-phone mr-2"></i>Call Now
+            </a>
+        </div>
+        
+        <button id="mobile-menu-btn" class="lg:hidden hamburger focus:outline-none" aria-label="Toggle mobile menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+    
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-80 h-full bg-black/95 backdrop-blur-md lg:hidden z-40">
+        <div class="flex flex-col h-full pt-20 px-6">
+            <a href="index.html#home" class="mobile-nav-link text-white py-4 border-b border-gray-700 hover:text-gray-300 transition">Home</a>
+            <a href="index.html#about-us" class="mobile-nav-link text-white py-4 border-b border-gray-700 hover:text-gray-300 transition">About</a>
+            <a href="index.html#services" class="mobile-nav-link text-white py-4 border-b border-gray-700 hover:text-gray-300 transition">Services</a>
+            <a href="index.html#events" class="mobile-nav-link text-white py-4 border-b border-gray-700 hover:text-gray-300 transition">Events</a>
+            <a href="index.html#contact-us" class="mobile-nav-link text-white py-4 border-b border-gray-700 hover:text-gray-300 transition">Contact</a>
+            <div class="mt-8 space-y-4">
+                <a href="tel:+260761741656" class="block bg-white text-black px-6 py-3 rounded-md text-center hover:bg-gray-200 transition font-medium">
+                    <i class="fas fa-phone mr-2"></i>Call Now
+                </a>
+                <a href="https://wa.me/260761741656" class="block bg-green-600 text-white px-6 py-3 rounded-md text-center hover:bg-green-700 transition font-medium">
+                    <i class="fab fa-whatsapp mr-2"></i>WhatsApp
+                </a>
+            </div>
+            <div class="mt-auto pb-8">
+                <div class="flex space-x-4 justify-center">
+                    <a href="#" class="text-gray-300 hover:text-white transition" aria-label="Facebook">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-white transition" aria-label="Instagram">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-white transition" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<section id="small-events-hero" class="relative min-h-screen flex items-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70 z-10"></div>
+        <img src="images/small-events-hero.jpg" alt="Intimate event setup with soft lighting and elegant decor" class="w-full h-full object-cover" loading="eager">
+    </div>
+    <div class="container mx-auto px-6 relative z-20 pt-20">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="text-white animate__animated animate__fadeInLeft">
+                <h1 class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6 font-serif">
+                    Intimate Gatherings,<br><span class="text-secondary">Perfectly Crafted</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-100 mb-8 max-w-xl leading-relaxed">
+                    From cozy birthday celebrations to elegant private dinners and impactful small corporate meetings, Boss Entertainment ensures every detail shines.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#our-projects" class="bg-secondary hover:bg-gray-300 text-black font-medium px-6 md:px-8 py-3 rounded-md transition shadow-lg hover:shadow-xl flex items-center justify-center focus-visible">
+                        <i class="fas fa-th-list mr-2"></i>
+                        Explore Our Projects
+                    </a>
+                    <a href="index.html#contact-us" class="bg-black border-2 border-white hover:bg-gray-800 text-white font-medium px-6 md:px-8 py-3 rounded-md transition shadow-lg hover:shadow-xl flex items-center justify-center focus-visible">
+                        <i class="fas fa-phone-alt mr-2"></i>
+                        Inquire Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="our-projects" class="py-16 md:py-20 px-6 bg-gray-100">
+    <div class="container mx-auto">
+        <div class="text-center mb-12 md:mb-16">
+            <span class="text-primary uppercase font-bold tracking-wider text-sm">Our Intimate Portfolio</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-black mt-2 mb-4 font-serif">Crafting Memorable Small Events</h2>
+            <div class="w-20 h-1 bg-primary mx-auto"></div>
+            <p class="text-gray-600 max-w-2xl mx-auto mt-6 leading-relaxed">
+                Explore a selection of our thoughtfully designed and perfectly executed small-scale events.
+            </p>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-4 mb-12">
+            <button class="category-button px-6 py-2 rounded-full border border-gray-300 bg-white text-gray-800 hover:bg-gray-100 transition active" data-category="all">All Projects</button>
+            <button class="category-button px-6 py-2 rounded-full border border-gray-300 bg-white text-gray-800 hover:bg-gray-100 transition" data-category="private">Private Parties</button>
+            <button class="category-button px-6 py-2 rounded-full border border-gray-300 bg-white text-gray-800 hover:bg-gray-100 transition" data-category="corporate">Corporate Gatherings</button>
+            <button class="category-button px-6 py-2 rounded-full border border-gray-300 bg-white text-gray-800 hover:bg-gray-100 transition" data-category="social">Social Celebrations</button>
+        </div>
+
+        <div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="project-item bg-white rounded-xl shadow-lg overflow-hidden hover-zoom will-change-transform animate__animated animate__fadeInUp" data-category="private">
+                <div class="h-64 relative">
+                    <img src="images/birthday-party.jpg" alt="Vibrant birthday party setup" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 gradient-overlay"></div>
+                    <div class="absolute bottom-4 left-4 text-white p-2 property-tag rounded-md text-sm font-medium">Private Party</div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2 text-black">A Milestone Birthday Bash</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Designed and executed a vibrant and personalized birthday celebration, incorporating unique themes and engaging entertainment for close friends and family.
+                    </p>
+                    <div class="flex items-center text-gray-500 text-sm">
+                        <i class="fas fa-map-marker-alt mr-2"></i> Lusaka, Zambia
+                        <span class="mx-3">|</span>
+                        <i class="fas fa-users mr-2"></i> 50 Guests
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item bg-white rounded-xl shadow-lg overflow-hidden hover-zoom will-change-transform animate__animated animate__fadeInUp" data-category="social">
+                <div class="h-64 relative">
+                    <img src="images/baby-shower.jpg" alt="Charming baby shower decor" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 gradient-overlay"></div>
+                    <div class="absolute bottom-4 left-4 text-white p-2 property-tag rounded-md text-sm font-medium">Social Celebration</div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2 text-black">"Bundle of Joy" Baby Shower</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Created a whimsical and heartwarming baby shower experience, complete with custom decorations, delightful catering, and fun activities.
+                    </p>
+                    <div class="flex items-center text-gray-500 text-sm">
+                        <i class="fas fa-map-marker-alt mr-2"></i> Kitwe, Zambia
+                        <span class="mx-3">|</span>
+                        <i class="fas fa-users mr-2"></i> 30 Guests
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item bg-white rounded-xl shadow-lg overflow-hidden hover-zoom will-change-transform animate__animated animate__fadeInUp" data-category="private">
+                <div class="h-64 relative">
+                    <img src="images/private-dinner.jpg" alt="Elegant private dinner setting" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 gradient-overlay"></div>
+                    <div class="absolute bottom-4 left-4 text-white p-2 property-tag rounded-md text-sm font-medium">Private Party</div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2 text-black">Exclusive Anniversary Dinner</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Curated an intimate and luxurious anniversary dinner, focusing on exquisite cuisine, sophisticated ambiance, and personalized service.
+                    </p>
+                    <div class="flex items-center text-gray-500 text-sm">
+                        <i class="fas fa-map-marker-alt mr-2"></i> Livingstone, Zambia
+                        <span class="mx-3">|</span>
+                        <i class="fas fa-users mr-2"></i> 10 Guests
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item bg-white rounded-xl shadow-lg overflow-hidden hover-zoom will-change-transform animate__animated animate__fadeInUp" data-category="corporate">
+                <div class="h-64 relative">
+                    <img src="images/corporate-retreat.jpg" alt="Productive small corporate retreat setting" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 gradient-overlay"></div>
+                    <div class="absolute bottom-4 left-4 text-white p-2 property-tag rounded-md text-sm font-medium">Corporate Gathering</div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2 text-black">Team Building Retreat</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Organized a focused corporate retreat, providing a conducive environment for team building activities and strategic planning sessions.
+                    </p>
+                    <div class="flex items-center text-gray-500 text-sm">
+                        <i class="fas fa-map-marker-alt mr-2"></i> Siavonga, Zambia
+                        <span class="mx-3">|</span>
+                        <i class="fas fa-users mr-2"></i> 25 Attendees
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item bg-white rounded-xl shadow-lg overflow-hidden hover-zoom will-change-transform animate__animated animate__fadeInUp" data-category="social">
+                <div class="h-64 relative">
+                    <img src="images/engagement-party.jpg" alt="Joyful engagement party" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 gradient-overlay"></div>
+                    <div class="absolute bottom-4 left-4 text-white p-2 property-tag rounded-md text-sm font-medium">Social Celebration</div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2 text-black">"She Said Yes!" Engagement</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Planned a joyous engagement party, creating a romantic and celebratory atmosphere for the happy couple and their loved ones.
+                    </p>
+                    <div class="flex items-center text-gray-500 text-sm">
+                        <i class="fas fa-map-marker-alt mr-2"></i> Ndola, Zambia
+                        <span class="mx-3">|</span>
+                        <i class="fas fa-users mr-2"></i> 70 Guests
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item bg-white rounded-xl shadow-lg overflow-hidden hover-zoom will-change-transform animate__animated animate__fadeInUp" data-category="corporate">
+                <div class="h-64 relative">
+                    <img src="images/small-product-launch.jpg" alt="Intimate product launch event" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 gradient-overlay"></div>
+                    <div class="absolute bottom-4 left-4 text-white p-2 property-tag rounded-md text-sm font-medium">Corporate Gathering</div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2 text-black">Startup's First Reveal</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Executed a successful small-scale product launch, ensuring a professional setup, engaging presentation, and memorable experience for key stakeholders.
+                    </p>
+                    <div class="flex items-center text-gray-500 text-sm">
+                        <i class="fas fa-map-marker-alt mr-2"></i> Lusaka, Zambia
+                        <span class="mx-3">|</span>
+                        <i class="fas fa-users mr-2"></i> 40 Guests
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item bg-white rounded-xl shadow-lg overflow-hidden hover-zoom will-change-transform animate__animated animate__fadeInUp" data-category="private">
+                <div class="h-64 relative">
+                    <img src="images/graduation-party.jpg" alt="Lively graduation party celebration" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 gradient-overlay"></div>
+                    <div class="absolute bottom-4 left-4 text-white p-2 property-tag rounded-md text-sm font-medium">Private Party</div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2 text-black">Graduate's Triumph Celebration</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Orchestrated a joyful graduation party, celebrating academic achievement with family and friends in a vibrant and personalized setting.
+                    </p>
+                    <div class="flex items-center text-gray-500 text-sm">
+                        <i class="fas fa-map-marker-alt mr-2"></i> Lusaka, Zambia
+                        <span class="mx-3">|</span>
+                        <i class="fas fa-users mr-2"></i> 60 Guests
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item bg-white rounded-xl shadow-lg overflow-hidden hover-zoom will-change-transform animate__animated animate__fadeInUp" data-category="private">
+                <div class="h-64 relative">
+                    <img src="images/themed-dinner.jpg" alt="Themed private dinner setup" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 gradient-overlay"></div>
+                    <div class="absolute bottom-4 left-4 text-white p-2 property-tag rounded-md text-sm font-medium">Private Party</div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2 text-black">A Night in Paris Themed Dinner</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Transformed a venue into a Parisian wonderland for a themed private dinner, complete with authentic decor, music, and catering.
+                    </p>
+                    <div class="flex items-center text-gray-500 text-sm">
+                        <i class="fas fa-map-marker-alt mr-2"></i> Lusaka, Zambia
+                        <span class="mx-3">|</span>
+                        <i class="fas fa-users mr-2"></i> 20 Guests
+                    </div>
+                </div>
+            </div>
+
+             <div class="project-item bg-white rounded-xl shadow-lg overflow-hidden hover-zoom will-change-transform animate__animated animate__fadeInUp" data-category="corporate">
+                <div class="h-64 relative">
+                    <img src="images/corporate-workshop.jpg" alt="Professional corporate workshop setup" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 gradient-overlay"></div>
+                    <div class="absolute bottom-4 left-4 text-white p-2 property-tag rounded-md text-sm font-medium">Corporate Gathering</div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2 text-black">Professional Development Workshop</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Provided full logistical support for a professional development workshop, ensuring a comfortable and productive environment for learning.
+                    </p>
+                    <div class="flex items-center text-gray-500 text-sm">
+                        <i class="fas fa-map-marker-alt mr-2"></i> Lusaka, Zambia
+                        <span class="mx-3">|</span>
+                        <i class="fas fa-users mr-2"></i> 35 Attendees
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="text-center mt-12">
+            <a href="index.html#contact-us" class="inline-block bg-black hover:bg-gray-800 text-white font-medium px-8 py-4 rounded-md transition shadow-lg hover:shadow-xl focus-visible">
+                <i class="fas fa-handshake mr-2"></i> Discuss Your Intimate Event
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="py-16 md:py-20 px-6 bg-white">
+    <div class="container mx-auto">
+        <div class="text-center mb-12 md:mb-16">
+            <span class="text-primary uppercase font-bold tracking-wider text-sm">What Our Clients Say</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-black mt-2 mb-4 font-serif">Hear From Those We've Celebrated With</h2>
+            <div class="w-20 h-1 bg-primary mx-auto"></div>
+            <p class="text-gray-600 max-w-2xl mx-auto mt-6 leading-relaxed">
+                Our success is reflected in the satisfaction of our clients and the unforgettable memories we help create.
+            </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="testimonial-card p-6 md:p-8 rounded-xl shadow-lg border border-gray-100 will-change-transform animate__animated animate__fadeInUp">
+                <div class="flex items-center mb-4">
+                    <img src="images/client-4.jpg" alt="Client 4" class="w-16 h-16 rounded-full object-cover mr-4 border-2 border-primary">
+                    <div>
+                        <p class="font-bold text-lg text-black">Mrs. Chanda Mweemba</p>
+                        <p class="text-gray-600 text-sm">Birthday Client</p>
+                    </div>
+                </div>
+                <p class="text-gray-700 leading-relaxed italic mb-4">
+                    "Boss Entertainment made my son's birthday absolutely magical! The decor, the games, everything was perfectly organized. It was stress-free and truly memorable."
+                </p>
+                <div class="flex text-yellow-500">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+            <div class="testimonial-card p-6 md:p-8 rounded-xl shadow-lg border border-gray-100 will-change-transform animate__animated animate__fadeInUp animate__delay-0.2s">
+                <div class="flex items-center mb-4">
+                    <img src="images/client-5.jpg" alt="Client 5" class="w-16 h-16 rounded-full object-cover mr-4 border-2 border-primary">
+                    <div>
+                        <p class="font-bold text-lg text-black">Mr. & Mrs. Nkandu</p>
+                        <p class="text-gray-600 text-sm">Anniversary Clients</p>
+                    </div>
+                </div>
+                <p class="text-gray-700 leading-relaxed italic mb-4">
+                    "Our anniversary dinner was intimate and elegant, just as we envisioned. Boss Entertainment's attention to detail, from the flowers to the music, was impeccable."
+                </p>
+                <div class="flex text-yellow-500">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+            <div class="testimonial-card p-6 md:p-8 rounded-xl shadow-lg border border-gray-100 will-change-transform animate__animated animate__fadeInUp animate__delay-0.4s">
+                <div class="flex items-center mb-4">
+                    <img src="images/client-6.jpg" alt="Client 6" class="w-16 h-16 rounded-full object-cover mr-4 border-2 border-primary">
+                    <div>
+                        <p class="font-bold text-lg text-black">Ms. Grace Phiri</p>
+                        <p class="text-gray-600 text-sm">Operations Manager, ZEDCorp</p>
+                    </div>
+                </div>
+                <p class="text-gray-700 leading-relaxed italic mb-4">
+                    "For our team's annual workshop, Boss Entertainment provided an excellent, focused environment. Their setup and support allowed us to concentrate on our objectives without any distractions."
+                </p>
+                <div class="flex text-yellow-500">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-gradient py-12 md:py-16 px-6 relative overflow-hidden">
+    <div class="container mx-auto text-center text-white relative z-10">
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 text-shadow font-serif">Ready to Plan Your Next Intimate Event?</h2>
+        <p class="text-lg mb-8 max-w-2xl mx-auto leading-relaxed">
+            Let our experts help you bring your vision to life and create moments that last a lifetime.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="tel:+260761741656" class="bg-secondary hover:bg-gray-300 text-black font-bold px-6 md:px-8 py-3 md:py-4 rounded-md inline-block transition shadow-lg hover:shadow-xl focus-visible">
+                <i class="fas fa-phone mr-2"></i> Call Now
+            </a>
+            <a href="https://wa.me/260761741656" class="bg-green-600 hover:bg-green-700 text-white font-bold px-6 md:px-8 py-3 md:py-4 rounded-md inline-block transition shadow-lg hover:shadow-xl focus-visible">
+                <i class="fab fa-whatsapp mr-2"></i> WhatsApp Us
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-black text-white py-12 px-6">
+    <div class="container mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="lg:col-span-2">
+                <div class="text-2xl font-bold mb-4">
+                    <span class="text-white">Boss</span>
+                    <span class="text-secondary">Entertainment</span>
+                </div>
+                <p class="text-gray-300 mb-6 max-w-md leading-relaxed">
+                    Your trusted partner for premium event planning solutions across Zambia. We turn your special moments into unforgettable memories.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-300 hover:text-secondary transition text-xl" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-secondary transition text-xl" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-secondary transition text-xl" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/260761741656" class="text-gray-300 hover:text-secondary transition text-xl" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="index.html#home" class="text-gray-300 hover:text-white transition">Home</a></li>
+                    <li><a href="index.html#about-us" class="text-gray-300 hover:text-white transition">About Us</a></li>
+                    <li><a href="index.html#services" class="text-gray-300 hover:text-white transition">Services</a></li>
+                    <li><a href="index.html#events" class="text-gray-300 hover:text-white transition">Events</a></li>
+                    <li><a href="index.html#contact-us" class="text-gray-300 hover:text-white transition">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold mb-4">Contact Info</h3>
+                <ul class="space-y-2">
+                    <li class="flex items-center text-gray-300">
+                        <i class="fas fa-phone mr-2"></i>
+                        <a href="tel:+260761741656" class="hover:text-white transition">+260 761 741 656</a>
+                    </li>
+                    <li class="flex items-center text-gray-300">
+                        <i class="fas fa-envelope mr-2"></i>
+                        <a href="mailto:info@bossentertainment.com" class="hover:text-white transition">info@bossentertainment.com</a>
+                    </li>
+                    <li class="flex items-start text-gray-300">
+                        <i class="fas fa-map-marker-alt mr-2 mt-1"></i>
+                        <span>Lusaka, Zambia</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+            <p class="text-gray-300 text-sm mb-2">©<span id="current-year-footer">2025</span> Boss Entertainment. All rights reserved.</p>
+            <p class="text-gray-400 text-xs">Powered by Garumi Dev</p>
+        </div>
+    </div>
+</footer>
+
+<a href="https://wa.me/260761741656" class="floating-whatsapp bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:shadow-xl focus-visible" aria-label="Contact us on WhatsApp">
+    <i class="fab fa-whatsapp text-2xl"></i>
+</a>
+
+<button id="back-to-top" class="fixed bottom-20 right-6 bg-black hover:bg-gray-800 text-white p-3 rounded-full shadow-lg transition-all duration-300 opacity-0 pointer-events-none focus-visible" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+</button>
+
+<script>
+    // Page Loading
+    window.addEventListener('load', function() {
+        const loadingOverlay = document.getElementById('loading-overlay');
+        loadingOverlay.style.opacity = '0';
+        setTimeout(() => {
+            loadingOverlay.style.display = 'none';
+        }, 500);
+    });
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburger = document.querySelector('.hamburger');
+
+    mobileMenuBtn.addEventListener('click', function() {
+        mobileMenu.classList.toggle('active');
+        hamburger.classList.toggle('active');
+        document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+    });
+
+    // Close mobile menu when clicking on links
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', function() {
+            mobileMenu.classList.remove('active');
+            hamburger.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+            mobileMenu.classList.remove('active');
+            hamburger.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+
+    // Navbar scroll effect
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 100) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                const offsetTop = target.offsetTop - 80;
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Active navigation link highlighting (adapted for current page)
+    const navLinks = document.querySelectorAll('.nav-link');
+    const path = window.location.pathname;
+    
+    // Check if the current page is small-events.html
+    if (path.includes('small-events.html')) {
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').includes('#events')) {
+                link.classList.add('active');
+            }
+        });
+    }
+
+    // Intersection Observer for animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate__fadeInUp');
+            }
+        });
+    }, observerOptions);
+
+    // Observe sections for animations
+    document.querySelectorAll('section').forEach(section => {
+        observer.observe(section);
+    });
+
+    // Back to Top Button
+    const backToTopBtn = document.getElementById('back-to-top');
+    
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+            backToTopBtn.style.opacity = '1';
+            backToTopBtn.style.pointerEvents = 'auto';
+        } else {
+            backToTopBtn.style.opacity = '0';
+            backToTopBtn.style.pointerEvents = 'none';
+        }
+    });
+
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // Project Category Filtering
+    const categoryButtons = document.querySelectorAll('.category-button');
+    const projectItems = document.querySelectorAll('.project-item');
+
+    categoryButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            categoryButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to the clicked button
+            button.classList.add('active');
+
+            const category = button.dataset.category;
+
+            projectItems.forEach(item => {
+                if (category === 'all' || item.dataset.category === category) {
+                    item.style.display = 'block'; // Or 'grid' or 'flex' depending on layout
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+
+    // Keyboard navigation for accessibility
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            mobileMenu.classList.remove('active');
+            hamburger.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+
+    // Performance optimization: Lazy load images
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src || img.src; // Use data-src for actual lazy loading
+                    img.classList.remove('lazy');
+                    imageObserver.unobserve(img);
+                }
+            });
+        });
+
+        document.querySelectorAll('img[data-src]').forEach(img => {
+            imageObserver.observe(img);
+        });
+    }
+
+    // Update current year in footer
+    document.getElementById('current-year-footer').textContent = new Date().getFullYear();
+    
+    // Preload critical images for this page
+    const preloadImages = [
+        'images/small-events-hero.jpg',
+        'images/birthday-party.jpg',
+        'images/baby-shower.jpg',
+        'images/private-dinner.jpg',
+        'images/corporate-retreat.jpg',
+        'images/engagement-party.jpg',
+        'images/small-product-launch.jpg',
+        'images/graduation-party.jpg',
+        'images/themed-dinner.jpg',
+        'images/corporate-workshop.jpg'
+    ];
+    
+    preloadImages.forEach(src => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.href = src;
+        link.as = 'image';
+        document.head.appendChild(link);
+    });
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Small Events - Boss Entertainment",
+  "description": "Explore Boss Entertainment's portfolio of intimate events, including birthday parties, baby showers, private dinners, and small corporate gatherings across Zambia.",
+  "url": "https://bossentertainment.com/small-events.html",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Boss Entertainment",
+    "url": "https://bossentertainment.com"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://bossentertainment.com/small-events.html"
+  },
+  "about": [
+    {
+      "@type": "Service",
+      "name": "Private Party Planning",
+      "description": "Planning and execution of intimate birthday parties, anniversary dinners, and family gatherings."
+    },
+    {
+      "@type": "Service",
+      "name": "Social Celebration Planning",
+      "description": "Comprehensive planning for baby showers, engagement parties, and other personal milestones."
+    },
+    {
+      "@type": "Service",
+      "name": "Small Corporate Event Management",
+      "description": "Management for corporate retreats, workshops, and small business gatherings."
+    }
+  ]
+}
+</script>
+
+</body>
+</html>
